@@ -8,12 +8,14 @@ import {
 import { createWrapper, HYDRATE } from 'next-redux-wrapper';
 import counterReducer from '@/store/reducer/counterSlice';
 import { authSlice } from '@/store/reducer/authSlice';
+import { UserSlice } from "@/store/reducer/userSlice";
 import logger from 'redux-logger';
 
 const reducer = (state: any, action: PayloadAction<any>) => {
     return combineReducers({
         counter: counterReducer,
-        [authSlice.name]: authSlice.reducer
+        [authSlice.name]: authSlice.reducer,
+        [UserSlice.name]: UserSlice.reducer
     })(state, action);
 };
 
@@ -36,4 +38,4 @@ export type AppThunk<ReturnType = void> = ThunkAction<
     RootState,
     unknown,
     Action
->;
+>;11111111
