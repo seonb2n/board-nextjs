@@ -38,5 +38,5 @@ export const UserSlice = createSlice({
 })
 
 export const {setUserState} = UserSlice.actions;
-export const selectUserState = (state: RootState) => state.auth.authState;
+export const selectUserState = (state: RootState) => state.login;
 export default UserSlice.reducer;

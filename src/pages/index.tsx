@@ -10,7 +10,7 @@ const Home = function () {
     const {value: count} = useAppSelector((state) => state.counter);
     const dispatch = useAppDispatch();
     const authState = useAppSelector(selectAuthState);
-    const loginState = useAppSelector(selectUserState);
+    const userState = useAppSelector(selectUserState);
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
 
@@ -41,9 +41,9 @@ const Home = function () {
                 <div>home</div>
             </div>
 
-            <div>{authState ? 'Logged in' : 'Not Logged In'}</div>
+            <div>{authState ? userState.name +'Logged in' : 'Not Logged In'}</div>
 
-            <div className="w-52">
+            <div className={authState ? "w-52 hidden " : "w-52 "}>
                 <form className="space-y-4 md:space-y-6" action="#">
                     <div>
                         <label htmlFor="email"
