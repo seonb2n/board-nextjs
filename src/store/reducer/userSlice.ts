@@ -17,7 +17,7 @@ const initialState: UserState = {
 }
 
 export const UserSlice = createSlice({
-    name: 'login',
+    name: 'loginUserState',
     initialState,
     reducers: {
         setUserState: (state, action) => {
@@ -38,5 +38,5 @@ export const UserSlice = createSlice({
 })
 
 export const {setUserState} = UserSlice.actions;
-export const selectUserState = (state: RootState) => state.login;
+export const selectUserState = (state: RootState) => state.loginUserState;
 export default UserSlice.reducer;
