@@ -5,3 +5,12 @@
 .bg-0B1728 {
     background-color: #0B1728;
 }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
